@@ -101,12 +101,12 @@ const Form = ({ handleInput, handleClickCreateCard, url, dataCard, fetchSuccess,
           <GetAvatar
             updateAvatar={handleInput}
             text="Subir foto de proyecto"
-            nameInput="photo"
+            nameInput="image"
           />
           <GetAvatar
             updateAvatar={handleInput}
             text="Subir foto de autora"
-            nameInput="image"
+            nameInput="photo"
           />
         </div>
         <button className="form__buttonsImg--reset" onClick={handleReset}>Limpiar datos</button>

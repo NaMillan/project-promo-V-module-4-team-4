@@ -38,7 +38,7 @@ function PreviewAuthor({ dataCard }) {
 			<section className="info-autor previewAutor">
 				<img
 					className="image previewAutor__image"
-					src={dataCard.image || user}
+					src={dataCard.photo || user}
 					alt="Imagen del autor"
 				/>
 				<p className="job previewAutor__job">

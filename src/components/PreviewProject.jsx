@@ -4,7 +4,7 @@ function PreviewProject({ dataCard }) {
 	return (
 		<img
 			className="image preview__image"
-			src={dataCard.photo || cover}
+			src={dataCard.image || cover}
 			alt="Imagen del proyecto"
 		/>
 	);
