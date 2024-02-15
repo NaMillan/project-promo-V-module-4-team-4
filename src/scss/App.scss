@@ -123,7 +123,15 @@
   }
 }
 .landing {
-  height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 100px;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      margin-top: 150px;
+    }
 }
 
 .form {
@@ -363,6 +371,7 @@
 
 .footer {
   height: 10vh;
+  margin-top: auto;
   display: flex;
   justify-content: center;
   align-items: center;

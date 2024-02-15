@@ -83,7 +83,7 @@ function App() {
       <div className="container">
         <Header />
         <Routes>
-          <Route path="/" element={<Landing />}/>
+          <Route path="/" element={<Landing dataCard={dataCard}/>}/>
           <Route
             path="/newProject"
             element={
