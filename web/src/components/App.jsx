@@ -7,6 +7,7 @@ import api from "../services/api";
 import ls from "../services/localStorage";
 import { Route, Routes } from "react-router-dom";
 import Landing from "./Landing";
+import apiProject from '../services/apiGetProject';
 
 function App() {
   const data = {
@@ -24,6 +25,17 @@ function App() {
   const [dataCard, setDataCard] = useState(ls.get("card", data));
   const [url, setUrl] = useState("");
   const [fetchSuccess, setFetchSuccess] = useState(null);
+
+
+
+  useEffect(() => {
+    apiProject.getProjectsFromApi().then(response => {
+      setDataCard(response.data);
+      console.log(response.data);
+    });
+  }, []);
+  
+
 
   useEffect(() => {
     ls.set("card", dataCard);
