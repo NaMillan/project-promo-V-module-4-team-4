@@ -4,7 +4,7 @@ const mysql = require('mysql2/promise');
 
 const server = express();
 server.use(cors());
-
+server.use(express.json());
 
 
 //conexion con la BD
@@ -35,6 +35,35 @@ server.get('/api/getprojects', async (req, res) => {
     res.json({success: true, data: results})
 });
 
+server.post('/api/addProject', async (req, res) => {
+	const connection = await getConnection();
+    console.log(req.body);
+	const insertAuthor =
+		'Insert into autor (nameAutor, job, photoAutor) values (?, ?, ?)';
+	const [resultAuthor] = await connection.query(insertAuthor, [
+		req.body.autor,
+		req.body.job,
+		req.body.photo,
+	]);
+	const lastInsertAuthor = resultAuthor.insertId;
+	const insertProject =
+		'Insert into project (nameProject, slogan, technologies, repo, demo, `desc`, photoProject, fk_autor) values (?, ?, ?, ?, ?, ?, ?, ?)';
+	const [resultProject] = await connection.query(insertProject, [
+		req.body.name,
+		req.body.slogan,
+		req.body.technologies,
+		req.body.repo,
+		req.body.demo,
+		req.body.desc,
+		req.body.image,
+		lastInsertAuthor,
+	]);
+	res.json({
+		//Aquí usar la misma estructura que tenemos en el front
+		success: true,
+		cardURL: `http://localhost:5001/detail/${resultProject.insertId}`,
+	});
+});
 
-const staticServer = './web/dist';
+const staticServer = './src/public-react';
 server.use(express.static(staticServer));

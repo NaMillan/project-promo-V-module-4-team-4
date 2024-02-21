@@ -27,7 +27,7 @@ function PreviewAuthor({ dataCard}) {
 						{dataCard.technologies || 'React JS, MongoDB'}
 					</p>
 
-					<a href={dataCard.demo}>
+					<a href={dataCard.demo} target="_blank">
 						<i className="fa-solid fa-globe previewProject__technologies--world" />
 					</a>
 

@@ -25,15 +25,16 @@ function App() {
   const [dataCard, setDataCard] = useState(ls.get("card", data));
   const [url, setUrl] = useState("");
   const [fetchSuccess, setFetchSuccess] = useState(null);
-
+  const [listProject, setListProject] = useState([]);
 
 
   useEffect(() => {
+    console.log("entro en el useeffect")
     apiProject.getProjectsFromApi().then(response => {
-      setDataCard(response.data);
+      setListProject(response.data);
       console.log(response.data);
     });
-  }, []);
+  }, []); 
   
 
 
@@ -95,7 +96,7 @@ function App() {
       <div className="container">
         <Header />
         <Routes>
-          <Route path="/" element={<Landing dataCard={dataCard}/>}/>
+          <Route path="/" element={<Landing dataCard={listProject}/>}/>
           <Route
             path="/newProject"
             element={
