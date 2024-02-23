@@ -1,0 +1,234 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container {
+	background-image: radial-gradient(circle at center, #403a5f, #211e2e);
+	display: flex;
+	flex-direction: column;
+}
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 10vh;
+	padding: 20px;
+}
+.header__container {
+	display: flex;
+	gap: 40px;
+}
+.header__container--text {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	margin-left: -25px;
+}
+
+.icon {
+	color: white;
+	font-size: 30px;
+}
+
+.logo {
+	width: auto;
+	height: 46px;
+}
+.preview {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 80vh;
+}
+
+.preview__image {
+	width: 100%;
+	/* height: 350px; */
+	object-fit: contain;
+	padding-top: 20px;
+}
+@media (min-width: 768px) {
+	.preview__image {
+		height: 400px;
+		width: 100%;
+	}
+}
+.preview__autor {
+	width: 302px;
+	background-color: white;
+	color: #3e3e3e;
+	display: flex;
+	flex-direction: row-reverse;
+	border-radius: 20px;
+	padding: 22.4px 9px 34.5px 9.8px;
+	transform: translateY(-25%);
+}
+@media (min-width: 768px) {
+	.preview__autor {
+		width: 450px;
+		justify-content: space-evenly;
+	}
+}
+.previewAutor {
+	font-family: 'Catamaran', 'sans serif';
+	text-align: center;
+	margin-right: 5px;
+}
+@media (min-width: 768px) {
+	.previewAutor {
+		margin-right: 0;
+	}
+}
+.previewAutor__image {
+	margin-top: 11px;
+	width: 70.5px;
+	height: 74.8px;
+}
+@media (min-width: 768px) {
+	.previewAutor__image {
+		height: 99px;
+		width: 99px;
+	}
+}
+.previewAutor__job {
+	font-size: 10px;
+	color: #909090;
+}
+@media (min-width: 768px) {
+	.previewAutor__job {
+		font-size: 14px;
+	}
+}
+.previewAutor__name {
+	font-size: 14px;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.8);
+}
+@media (min-width: 768px) {
+	.previewAutor__name {
+		font-size: 18px;
+	}
+}
+.previewProject {
+	font-family: 'Poppins', sans-serif;
+	width: 150px;
+}
+@media (min-width: 768px) {
+	.previewProject {
+		width: 216px;
+	}
+}
+.previewProject__subtitle {
+	font-size: 8px;
+	text-align: center;
+	transform: translate(30%, 70%);
+	background-color: white;
+	width: 93px;
+}
+@media (min-width: 768px) {
+	.previewProject__subtitle {
+		font-size: 10px;
+		width: 98px;
+		transform: translate(60%, 70%);
+	}
+}
+.previewProject__title {
+	font-weight: bold;
+	font-size: 14px;
+	color: #000;
+	margin-bottom: 2px;
+}
+@media (min-width: 768px) {
+	.previewProject__title {
+		font-size: 24px;
+	}
+}
+.previewProject__slogan {
+	font-weight: 500;
+	font-size: 12px;
+	color: #575757;
+	margin-bottom: 14px;
+}
+@media (min-width: 768px) {
+	.previewProject__slogan {
+		font-size: 16px;
+		margin-bottom: 5px;
+		font-weight: bold;
+	}
+}
+.previewProject__desc {
+	font-size: 8px;
+	color: rgba(62, 62, 62, 0.88);
+	line-height: 1.76;
+	margin-bottom: 18px;
+}
+@media (min-width: 768px) {
+	.previewProject__desc {
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+}
+.previewProject__line {
+	width: 100%;
+	background-image: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 0),
+		rgba(1, 1, 1, 0.75),
+		rgba(255, 255, 255, 0)
+	);
+	border: 0;
+	height: 1px;
+	margin-bottom: 11.7px;
+}
+@media (min-width: 768px) {
+	.previewProject__line {
+		margin-bottom: 15px;
+	}
+}
+.previewProject__technologies {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+@media (min-width: 768px) {
+	.previewProject__technologies {
+		gap: 10px;
+	}
+}
+.previewProject__technologies--text {
+	font-family: 'Catamaran', 'sans serif';
+	padding: 3px;
+	font-size: 10px;
+	background-color: rgba(0, 0, 0, 0.05);
+	border-radius: 20px;
+	color: #505050;
+	justify-self: flex-start;
+}
+@media (min-width: 768px) {
+	.previewProject__technologies--text {
+		font-size: 12px;
+		padding: 0px 20px;
+	}
+}
+.previewProject__technologies--world,
+.previewProject__technologies--github {
+	font-size: 14px;
+	color: black;
+}
+@media (min-width: 768px) {
+	.previewProject__technologies--world,
+	.previewProject__technologies--github {
+		font-size: 16px;
+	}
+}
+.footer {
+	height: 10vh;
+	margin-top: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+}

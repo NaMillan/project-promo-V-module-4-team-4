@@ -1,8 +1,6 @@
 import user from '../images/user.jpeg';
 
-function PreviewAuthor({ dataCard}) {
-
-	
+function PreviewAuthor({ dataCard }) {
 	return (
 		<section className="preview__autor">
 			<section className="info-project previewProject">
@@ -40,14 +38,14 @@ function PreviewAuthor({ dataCard}) {
 			<section className="info-autor previewAutor">
 				<img
 					className="image previewAutor__image"
-					src={dataCard.photoAutor || user}
+					src={dataCard.photo || user}
 					alt="Imagen del autor"
 				/>
 				<p className="job previewAutor__job">
 					{dataCard.job || 'Developer'}
 				</p>
 				<p className="name previewAutor__name">
-					{dataCard.nameAutor || 'Ana'}
+					{dataCard.autor || 'Ana'}
 				</p>
 			</section>
 		</section>
