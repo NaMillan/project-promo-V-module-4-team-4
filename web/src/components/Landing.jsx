@@ -5,9 +5,10 @@ import PreviewAuthor from './PreviewAuthor';
 function Landing({ listProject }) {
 	const renderCards = listProject.map((dataCard) => {
 		return (
-			<article key={dataCard.idProject}>
+			<a key={dataCard.idProject} href={`http://localhost:5001/detail/${dataCard.idProject}`} className='linkstyle'><article>
 				<PreviewAuthor dataCard={dataCard} />
 			</article>
+			</a>
 		);
 	});
 

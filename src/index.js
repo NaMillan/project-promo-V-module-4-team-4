@@ -42,6 +42,54 @@ server.post('/api/addProject', async (req, res) => {
 			success: false,
 			mjs: 'Error',
 		});
+	
+	} else if (req.body.slogan === '') {
+		res.json({
+			success: false,
+			mjs: 'Error',
+		});
+	} else if (req.body.technologies === '') {
+		res.json({
+			success: false,
+			mjs: 'Error',
+		});
+	} else if (req.body.repo === '') {
+		res.json({
+			success: false,
+			mjs: 'Error',
+		});
+	} else if (req.body.demo=== '') {
+		res.json({
+			success: false,
+			mjs: 'Error',
+		});
+	} else if (req.body.desc === '') {
+		res.json({
+			success: false,
+			mjs: 'Error',
+		});
+	} else if (req.body.autor === '') {
+		res.json({
+			success: false,
+			mjs: 'Error',
+		});
+	} else if (req.body.job === '') {
+		res.json({
+			success: false,
+			mjs: 'Error',
+		});
+	} else if (req.body.image === '') {
+		res.json({
+			success: false,
+			mjs: 'Error',
+		});
+	} else if (req.body.photo === '') {
+		res.json({
+			success: false,
+			mjs: 'Error',
+		});
+	
+	
 	} else {
 		const insertAuthor =
 			'Insert into autor (nameAutor, job, photoAutor) values (?, ?, ?)';

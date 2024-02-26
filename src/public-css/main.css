@@ -42,13 +42,19 @@
 	align-items: center;
 	justify-content: center;
 	height: 80vh;
+	margin: 50px 30px 50px;
+	
 }
-
+@media (min-width: 768px) {
+.preview{
+	margin: 180px 30px 70px;
+}
+}
 .preview__image {
-	width: 100%;
+	width: 290px;
 	/* height: 350px; */
 	object-fit: contain;
-	padding-top: 20px;
+
 }
 @media (min-width: 768px) {
 	.preview__image {
@@ -57,7 +63,7 @@
 	}
 }
 .preview__autor {
-	width: 302px;
+	width: 270px;
 	background-color: white;
 	color: #3e3e3e;
 	display: flex;
