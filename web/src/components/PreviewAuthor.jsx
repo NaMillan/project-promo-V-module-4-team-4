@@ -1,15 +1,17 @@
 import user from '../images/user.jpeg';
 
 function PreviewAuthor({ dataCard }) {
-	if (dataCard.photoAutor !== ''){
+	console.log(dataCard);
+	if (dataCard.photoAutor !== '') {
 		dataCard.photo = dataCard.photoAutor
-	} else if (dataCard.photoProject !== ''){
-		dataCard.image = dataCard.photoProject
-	} else if (dataCard.nameAutor !== ''){
-		dataCard.autor = dataCard.nameAutor
-	}else if (dataCard.nameProject !== ''){
-		dataCard.name = dataCard.nameProject
 	}
+	// }else if (dataCard.photoProject !== '') {
+	// 	dataCard.image = dataCard.photoProject
+	// } else if (dataCard.nameAutor !== '') {
+	// 	dataCard.autor = dataCard.nameAutor
+	// } else if (dataCard.nameProject !== '') {
+	// 	dataCard.name = dataCard.nameProject
+	// };
 
 	return (
 		<section className="preview__autor">
