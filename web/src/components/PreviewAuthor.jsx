@@ -10,7 +10,7 @@ function PreviewAuthor({ dataCard }) {
 				<hr className="line previewProject__line" />
 
 				<h2 className="previewProject__title">
-					{dataCard.nameProject || 'Elegant Workspace'}
+					{dataCard.name || 'Elegant Workspace'}
 				</h2>
 				<p className="slogan previewProject__slogan">
 					{dataCard.slogan || 'Diseños Exclusivos'}
