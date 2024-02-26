@@ -124,7 +124,9 @@ server.get('/detail/:id', async (req, res) => {
 	const selectProjectId = `SELECT * FROM project, autor WHERE project.fk_autor = autor.idAutor and project.idProject = ?`;
 	const conex = await getConnection();
 	const [resultProject] = await conex.query(selectProjectId, [id]);
+	console.log(resultProject[0]);
 	res.render('detail', { project: resultProject[0] });
+	
 });
 const staticServer = './src/public-react';
 server.use(express.static(staticServer));
