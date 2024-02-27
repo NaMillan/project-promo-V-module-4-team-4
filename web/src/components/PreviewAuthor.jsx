@@ -1,4 +1,4 @@
-import user from '../images/user.jpeg';
+import user from '../images/user.png';
 
 function PreviewAuthor({ dataCard }) {
 	return (
