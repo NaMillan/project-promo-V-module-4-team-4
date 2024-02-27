@@ -18,7 +18,7 @@ async function getConnection() {
 	return connection;
 }
 
-const port = 5001;
+const port = process.env.PORT || 5001;
 server.listen(port, () => {
 	console.log(`El servidor se está ejecutando en el puerto ${port}`);
 });
@@ -42,7 +42,6 @@ server.post('/api/addProject', async (req, res) => {
 			success: false,
 			mjs: 'Error',
 		});
-	
 	} else if (req.body.slogan === '') {
 		res.json({
 			success: false,
@@ -58,7 +57,7 @@ server.post('/api/addProject', async (req, res) => {
 			success: false,
 			mjs: 'Error',
 		});
-	} else if (req.body.demo=== '') {
+	} else if (req.body.demo === '') {
 		res.json({
 			success: false,
 			mjs: 'Error',
@@ -88,8 +87,6 @@ server.post('/api/addProject', async (req, res) => {
 			success: false,
 			mjs: 'Error',
 		});
-	
-	
 	} else {
 		const insertAuthor =
 			'Insert into autor (nameAutor, job, photoAutor) values (?, ?, ?)';
@@ -126,7 +123,6 @@ server.get('/detail/:id', async (req, res) => {
 	const [resultProject] = await conex.query(selectProjectId, [id]);
 	console.log(resultProject[0]);
 	res.render('detail', { project: resultProject[0] });
-	
 });
 const staticServer = './src/public-react';
 server.use(express.static(staticServer));
