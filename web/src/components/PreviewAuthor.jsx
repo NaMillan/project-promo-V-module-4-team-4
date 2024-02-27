@@ -1,7 +1,6 @@
 import user from '../images/user.jpeg';
 
 function PreviewAuthor({ dataCard }) {
-	console.log(dataCard);
 	return (
 		<section className="preview__autor">
 			<section className="info-project previewProject">

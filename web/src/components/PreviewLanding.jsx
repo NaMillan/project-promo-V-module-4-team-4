@@ -1,7 +1,6 @@
 import user from '../images/user.jpeg';
 
 function PreviewAuthor({ project }) {
-	console.log(project);
 	return (
 		<section className="preview__autor">
 			<section className="info-project previewProject">
