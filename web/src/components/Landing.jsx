@@ -1,13 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PreviewAuthor from './PreviewAuthor';
+import PreviewLanding from './PreviewLanding';
 
 function Landing({ listProject }) {
-	const renderCards = listProject.map((dataCard) => {
+	const renderCards = listProject.map((project) => {
 		return (
-			<a key={dataCard.idProject} href={`http://localhost:5001/detail/${dataCard.idProject}`} className='linkstyle'><article>
-				<PreviewAuthor dataCard={dataCard} />
-			</article>
+			<a
+				key={project.idProject}
+				href={`http://localhost:5001/detail/${project.idProject}`}
+				className="linkstyle"
+			>
+				<article>
+					<PreviewLanding project={project} />
+				</article>
 			</a>
 		);
 	});

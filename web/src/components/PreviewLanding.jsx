@@ -1,7 +1,7 @@
 import user from '../images/user.jpeg';
 
-function PreviewAuthor({ dataCard }) {
-	console.log(dataCard);
+function PreviewAuthor({ project }) {
+	console.log(project);
 	return (
 		<section className="preview__autor">
 			<section className="info-project previewProject">
@@ -10,27 +10,21 @@ function PreviewAuthor({ dataCard }) {
 				</p>
 				<hr className="line previewProject__line" />
 
-				<h2 className="previewProject__title">
-					{dataCard.name || 'Elegant Workspace'}
-				</h2>
+				<h2 className="previewProject__title">{project.nameProject}</h2>
 				<p className="slogan previewProject__slogan">
-					{dataCard.slogan || 'Diseños Exclusivos'}
+					{project.slogan}
 				</p>
-				<p className="previewProject__desc">
-					{' '}
-					{dataCard.desc ||
-						'Product Description. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptas consequuntur tempore libero veritatis.'}
-				</p>
+				<p className="previewProject__desc"> {project.desc}</p>
 				<section className="technologies previewProject__technologies">
 					<p className="text previewProject__technologies--text">
-						{dataCard.technologies || 'React JS, MongoDB'}
+						{project.technologies}
 					</p>
 
-					<a href={dataCard.demo} target="_blank">
+					<a href={project.demo} target="_blank">
 						<i className="fa-solid fa-globe previewProject__technologies--world" />
 					</a>
 
-					<a href={dataCard.repo} target="_blank">
+					<a href={project.repo} target="_blank">
 						<i className="fa-brands fa-github previewProject__technologies--github" />
 					</a>
 				</section>
@@ -39,15 +33,11 @@ function PreviewAuthor({ dataCard }) {
 			<section className="info-autor previewAutor">
 				<img
 					className="image previewAutor__image"
-					src={dataCard.photo || user}
+					src={project.photoAutor}
 					alt="Imagen del autor"
 				/>
-				<p className="job previewAutor__job">
-					{dataCard.job || 'Developer'}
-				</p>
-				<p className="name previewAutor__name">
-					{dataCard.autor || 'Ana'}
-				</p>
+				<p className="job previewAutor__job">{project.job}</p>
+				<p className="name previewAutor__name">{project.nameAutor}</p>
 			</section>
 		</section>
 	);
