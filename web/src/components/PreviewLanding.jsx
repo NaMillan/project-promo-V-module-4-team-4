@@ -1,5 +1,3 @@
-import user from '../images/user.jpeg';
-
 function PreviewAuthor({ project }) {
 	return (
 		<section className="preview__autor">

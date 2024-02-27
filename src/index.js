@@ -111,7 +111,7 @@ server.post('/api/addProject', async (req, res) => {
 		res.json({
 			//Aquí usar la misma estructura que tenemos en el front
 			success: true,
-			cardURL: `http://localhost:5001/detail/${resultProject.insertId}`,
+			cardURL: `https://project-promo-v-module-4-team-4.onrender.com/detail/${resultProject.insertId}`,
 		});
 	}
 });
