@@ -7,7 +7,7 @@ function Landing({ listProject }) {
 		return (
 			<a
 				key={project.idProject}
-				href={`http://localhost:5001/detail/${project.idProject}`}
+				href={`https://project-promo-v-module-4-team-4.onrender.com/detail/${project.idProject}`}
 				className="linkstyle"
 			>
 				<article>
